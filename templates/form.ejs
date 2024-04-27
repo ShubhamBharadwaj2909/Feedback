@@ -1,0 +1,44 @@
+<!-- feedbackForm.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+    <form action="/submit-feedback" method="post">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="assetName">Asset Name:</label>
+            <input type="text" id="assetName" name="assetName" required>
+        </div>
+        <div>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
+        <div>
+            <label for="feedbackType">Feedback Type:</label>
+            <select id="feedbackType" name="feedbackType" required>
+                <option value="">Select Feedback Type</option>
+                <option value="Bug">Bug</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="General Feedback">General Feedback</option>
+            </select>
+        </div>
+        <div>
+            <label for="feedbackDetails">Feedback Details:</label>
+            <textarea id="feedbackDetails" name="feedbackDetails" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
